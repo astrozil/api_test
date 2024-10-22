@@ -22,6 +22,7 @@ app.get('/convert', async (req, res) => {
 
         return res.json({ mp3Url: audioUrl });
     } catch (error) {
+        console.message(error.message);
         return res.status(500).json({ error: error});
     }
 });
