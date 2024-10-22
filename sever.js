@@ -22,7 +22,7 @@ app.get('/convert', async (req, res) => {
 
         return res.json({ mp3Url: audioUrl });
     } catch (error) {
-        return res.status(500).json({ error: 'Failed to fetch video information.' });
+        return res.status(500).json({ error: error});
     }
 });
 
